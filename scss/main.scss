@@ -1,0 +1,60 @@
+$black-color: #000000;
+$white-color: #ffffff;
+$background-color:#f8f8f8;
+$spice-color-one:#fd4848;
+$spice-color-two:#4974fc;
+$spice-color-three:#ff6c1f;
+
+
+
+.container{
+width: 100%;
+height: 100vh;
+overflow: hidden;
+position: relative;
+
+.navbtn{
+    position: absolute;
+    font-size: 3rem;
+font-weight: 500;    
+    
+}
+.logo{
+    left: 2rem;
+    top: 2rem;
+
+}
+.work{
+    right: 2rem;
+    top: 2rem;
+}
+.about{
+    left: 2rem;
+    bottom: 2rem;
+}
+.contact{
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.socialLinks{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 3.5rem;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    img{
+        border-radius: 50%;
+        outline: 2px solid $black-color;
+        margin: .5rem;
+        height: 2rem;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+}
+
+}
