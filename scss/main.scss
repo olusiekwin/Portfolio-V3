@@ -6,18 +6,25 @@ $spice-color-two:#4974fc;
 $spice-color-three:#ff6c1f;
 
 
-
+::-webkit-scrollbar {
+    display: none;
+  }
 .container{
 width: 100%;
-height: 100vh;
-overflow: hidden;
 position: relative;
+margin: 9rem 0;
 
 .navbtn{
-    position: absolute;
+
+    position: fixed;
     font-size: 3rem;
+
 font-weight: 500;    
-    
+    @media screen and(max-width:1000px) {
+        all: unset;
+        margin-bottom: 1rem;
+        
+    }
 }
 .logo{
     left: 2rem;
@@ -31,6 +38,7 @@ font-weight: 500;
 .about{
     left: 2rem;
     bottom: 2rem;
+    
 }
 .contact{
     right: 2rem;
@@ -38,8 +46,9 @@ font-weight: 500;
 }
 
 .socialLinks{
-    position: absolute;
+    position: fixed;
     display: flex;
+    top: 0;
     flex-direction: column;
     right: 3.5rem;
     height: 100%;
@@ -55,6 +64,69 @@ font-weight: 500;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
 }
+@media screen and(max-width:1000px) {
+    all: unset;
+    width: 100%;
+height: 5rem;
+    
 }
 
 }
+
+
+.work-div{
+    flex-wrap: wrap;
+align-self: center;
+    width: 55%;
+    margin: auto;
+    height: auto;
+    margin-top: 4rem;
+
+    display: flex;
+    gap: 4rem;
+   
+    @media screen and(max-width:1000px) {
+width: 100%; 
+padding: 2rem;       
+    }
+    .project{
+
+        .p-image{
+            width: 100%;
+        }
+        .p-heading{
+            font-size: 2rem;
+            margin: 2rem 0;
+            color: $black-color;
+        }
+
+        .p-about{
+            color: $black-color;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-family: neueLight;
+        }
+        .technologies{
+            width: 100%;
+            display: flex;
+            p{
+                border-radius: 25px;
+                background-color: rgba(255, 0, 0, 0.123);
+                padding: .4rem 1rem;
+                color: #4974fc;
+                font-size: .8rem;
+                font-weight: bold;
+                margin-right: 2rem;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+}
+        }
+      
+    }
+   
+}
+
+}
+
