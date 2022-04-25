@@ -149,7 +149,7 @@
   display: flex;
   width: 100%;
   margin-top: 4rem;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .container .aboutHolder .aboutText .a-left {
@@ -175,5 +175,113 @@
 .container .aboutHolder .aboutText .a-right .more {
   margin-bottom: 3rem;
   font-size: 1.1rem;
+  font-weight: lighter;
   line-height: 1.5rem;
+}
+
+.container .contactHolder {
+  width: 100%;
+  position: fixed;
+  height: 70vh;
+  z-index: 20;
+  display: flex;
+  bottom: 0;
+}
+
+.container .contactHolder .c-left {
+  width: 50%;
+  height: 100%;
+}
+
+.container .contactHolder .c-left img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .contactHolder .c-right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  font-size: 1.1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 0 3rem 2rem;
+}
+
+.container .contactHolder .c-right .c-head .heading {
+  font-size: 1.05rem;
+}
+
+.container .contactHolder .c-right .c-head .input {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.container .contactHolder .c-right .c-head .input .email {
+  width: 13rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.container .contactHolder .c-right .c-head .input .p-subscribe {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .6rem;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.container .contactHolder .c-right .otherProjects .heading {
+  font-size: 1.05rem;
+}
+
+.container .contactHolder .c-right .otherProjects .content {
+  margin-top: 1rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.container .contactHolder .c-right .otherProjects .content .other {
+  margin-right: 2rem;
+}
+
+.container .contactHolder .c-right .otherProjects .content .other .heading {
+  font-size: 1rem;
+  margin-bottom: .7rem;
+}
+
+.container .contactHolder .c-right .otherProjects .content .other .link {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.container .contactHolder .c-right .feedback .heading {
+  font-size: 1rem;
+  margin-bottom: .7rem;
+}
+
+.container .contactHolder .c-right .feedback .link {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.container .contactHolder .c-right .imgLin {
+  display: flex;
+}
+
+.container .contactHolder .c-right .imgLin img {
+  height: 2.5rem;
+  margin-right: 2rem;
 }

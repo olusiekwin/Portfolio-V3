@@ -149,7 +149,7 @@ padding: 2rem;
         display: flex;
         width: 100%;
         margin-top: 4rem;
-        gap: 3rem;
+        gap: 5rem;
         .a-left{
             width: 40%;
             .name{
@@ -168,10 +168,119 @@ padding: 2rem;
             .more{
                 margin-bottom: 3rem;
                 font-size: 1.1rem;
+                font-weight: lighter;
                 line-height: 1.5rem;
             }
         }
     }
+}
+.contactHolder{
+    width: 100%;
+    position: fixed;
+    height: 70vh;
+    z-index: 20;
+    display: flex;
+    bottom: 0;
+.c-left{
+    width: 50%;
+    height: 100%;
+    img{
+        height: 100%;
+object-fit: cover;
+    }
+}
+.c-right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+display: flex;
+font-size: 1.1rem;
+
+flex-direction: column;
+justify-content: space-between;
+padding: 3rem 0 3rem 2rem;
+
+.c-head{
+    .heading{
+        font-size: 1.05rem;
+    }
+    .input{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        .email{
+            width: 13rem;
+            height: 2.5rem;
+            border-radius:5px ;
+            -webkit-border-radius:5px ;
+            -moz-border-radius:5px ;
+            -ms-border-radius:5px ;
+            -o-border-radius:5px ;
+}
+        .p-subscribe{
+            border-radius: 50%;
+            height: 4rem;
+            width: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .6rem;
+            padding: 1rem;
+            margin-left: 1rem;
+       
+}
+    }
+
+}
+.otherProjects{
+    .heading{
+        font-size: 1.05rem;
+    }
+    .content{
+        margin-top: 1rem;
+
+        display: flex;
+        align-items: baseline;
+        .other{
+            margin-right: 2rem;
+            .heading{
+                font-size: 1rem;
+                margin-bottom: .7rem;
+            }
+            .link{
+                color: $black-color;
+                font-size: 1.2rem;
+                font-weight: lighter;
+            }
+        }
+    }
+
+}
+.feedback{
+    .heading{
+        font-size: 1rem;
+        margin-bottom: .7rem;
+    }
+    .link{
+        color: $black-color;
+        font-size: 1.2rem;
+        font-weight: lighter;
+    }
+
+}
+.imgLin{
+    display: flex;
+    img{
+        height: 2.5rem;
+        margin-right: 2rem;
+    }
+}
+// continue
+
+
+
+}
+
 }
 
 }
