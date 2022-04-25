@@ -14,10 +14,15 @@ width: 100%;
 position: relative;
 margin: 9rem 0;
 
+.plateHolder{
+    display: none;
+}
 .navbtn{
 
     position: fixed;
     font-size: 3rem;
+    z-index: 12;
+
 
 font-weight: 500;    
     @media screen and(max-width:1000px) {
@@ -126,6 +131,47 @@ padding: 2rem;
       
     }
    
+}
+
+.aboutHolder{
+    width: 70%;
+    margin: auto;
+    margin-top: 5rem;
+    .img{
+        width: 100%;
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+    }
+    .aboutText{
+        display: flex;
+        width: 100%;
+        margin-top: 4rem;
+        gap: 3rem;
+        .a-left{
+            width: 40%;
+            .name{
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+                margin-bottom: 3rem;
+                font-weight: 200;
+            }
+            .nameText{
+                font-size: 1.3rem;
+                line-height: 1.7rem;
+            }
+        }
+        .a-right{
+            width: 60%;
+            .more{
+                margin-bottom: 3rem;
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
 }
 
 }

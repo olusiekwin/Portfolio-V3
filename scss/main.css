@@ -8,9 +8,14 @@
   margin: 9rem 0;
 }
 
+.container .plateHolder {
+  display: none;
+}
+
 .container .navbtn {
   position: fixed;
   font-size: 3rem;
+  z-index: 12;
   font-weight: 500;
 }
 
@@ -123,4 +128,52 @@
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+}
+
+.container .aboutHolder {
+  width: 70%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.container .aboutHolder .img {
+  width: 100%;
+  position: relative;
+}
+
+.container .aboutHolder .img img {
+  width: 100%;
+}
+
+.container .aboutHolder .aboutText {
+  display: flex;
+  width: 100%;
+  margin-top: 4rem;
+  gap: 3rem;
+}
+
+.container .aboutHolder .aboutText .a-left {
+  width: 40%;
+}
+
+.container .aboutHolder .aboutText .a-left .name {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 200;
+}
+
+.container .aboutHolder .aboutText .a-left .nameText {
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+}
+
+.container .aboutHolder .aboutText .a-right {
+  width: 60%;
+}
+
+.container .aboutHolder .aboutText .a-right .more {
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
