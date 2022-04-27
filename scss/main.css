@@ -177,6 +177,7 @@
 .container .aboutHolder .img {
   width: 100%;
   position: relative;
+  min-height: 35rem;
 }
 
 .container .aboutHolder .img img {
@@ -184,6 +185,81 @@
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  position: absolute;
+}
+
+.container .aboutHolder .img #container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 49;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: transparent;
+}
+
+.container .aboutHolder .img #container #circle {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin: auto;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.container .aboutHolder .img #container #circle .text {
+  color: #fd4848;
+  font-weight: bold;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .aboutHolder .img #container #circle svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20rem;
+  height: 20rem;
+  background-color: transparent;
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-filter: blur(1px);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-filter: blur(0px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-filter: blur(1px);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-filter: blur(0px);
+  }
 }
 
 .container .aboutHolder .aboutText {

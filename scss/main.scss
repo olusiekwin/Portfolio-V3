@@ -148,12 +148,73 @@ $spice-color-three: #ff6c1f;
     .img {
       width: 100%;
       position: relative;
+      min-height: 35rem;
 
       img {
         max-height: 35rem;
         object-fit: cover;
         width: 100%;
+        position: absolute;
       }
+
+      #container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 49;
+        height: max-content;
+        background-color: transparent;
+
+        #circle {
+          position: relative;
+          width: 20rem;
+          height: 20rem;
+          margin: auto;
+          overflow: hidden;
+          background-color: transparent;
+
+          .text {
+            color: $spice-color-one;
+            font-weight: bold;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+          }
+
+          svg {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20rem;
+            height: 20rem;
+            background-color: transparent;
+
+            -webkit-animation-name: rotate;
+
+            animation-name: rotate;
+
+            animation-duration: 3s;
+
+            -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+            animation-timing-function: linear;
+          }
+        }
+
+        @keyframes rotate {
+          from {
+            transform: rotate(360deg);
+            -webkit-filter: blur(1px);
+          }
+          to {
+            transform: rotate(0);
+
+            -webkit-filter: blur(0px);
+          }
+        }
+      }
+      //
     }
     .aboutText {
       display: flex;
