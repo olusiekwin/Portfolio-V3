@@ -88,11 +88,8 @@
 
 .container .socialLinks img:hover {
   cursor: pointer;
-  transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 @media screen and (max-width: 1000px) {
@@ -482,9 +479,18 @@
 }
 
 .container .contactHolder .c-right .imgLin img {
-  height: 2.5rem;
-  cursor: pointer;
   margin-right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.container .contactHolder .c-right .imgLin img:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .container .projectPreview {

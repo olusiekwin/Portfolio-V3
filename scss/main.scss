@@ -72,11 +72,7 @@ $spice-color-three: #ff6c1f;
       transition: all ease-in-out 0.5s;
       &:hover {
         cursor: pointer;
-        transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        -o-transform: rotate(10deg);
+        transform: rotate(360deg);
       }
     }
     @media screen and(max-width:1000px) {
@@ -394,9 +390,16 @@ $spice-color-three: #ff6c1f;
       .imgLin {
         display: flex;
         img {
-          height: 2.5rem;
-          cursor: pointer;
           margin-right: 2rem;
+
+          height: 2rem;
+          width: 2rem;
+          cursor: pointer;
+          transition: all ease-in-out 0.5s;
+          &:hover {
+            cursor: pointer;
+            transform: rotate(360deg);
+          }
         }
       }
       // continue
