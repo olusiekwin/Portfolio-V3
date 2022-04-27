@@ -19,7 +19,7 @@
 
 .container .navbtn {
   position: fixed;
-  font-size: 3rem;
+  font-size: 2.05rem;
   z-index: 12;
   font-weight: 500;
 }
@@ -53,13 +53,22 @@
 
 .container .socialLinks {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 0;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   right: 3.5rem;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .socialLinks img {
@@ -67,12 +76,14 @@
   outline: 2px solid transparent;
   margin: 0.5rem;
   height: 2rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  transition: all ease-in-out .5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 .container .socialLinks img:hover {
@@ -93,12 +104,16 @@
 }
 
 .container .work-div {
-  flex-wrap: wrap;
-  align-self: center;
-  width: 55%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 60%;
   margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: auto;
   margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 4rem;
 }
@@ -120,6 +135,10 @@
   color: #000000;
 }
 
+.container .work-div .project .p-heading:hover {
+  color: #fd4848;
+}
+
 .container .work-div .project .p-about {
   color: #000000;
   font-size: 1.3rem;
@@ -129,14 +148,16 @@
 
 .container .work-div .project .technologies {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .container .work-div .project .technologies p {
   border-radius: 25px;
-  background-color: rgba(255, 0, 0, 0.123);
+  background-color: rgba(255, 0, 0, 0.089);
   padding: 0.4rem 1rem;
-  color: #4974fc;
+  color: #fd4848;
   font-size: 0.8rem;
   font-weight: bold;
   margin-right: 2rem;
@@ -160,11 +181,14 @@
 
 .container .aboutHolder .img img {
   max-height: 35rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
 .container .aboutHolder .aboutText {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-top: 4rem;
@@ -193,7 +217,7 @@
 
 .container .aboutHolder .aboutText .a-right .more {
   margin-bottom: 3rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: lighter;
   line-height: 1.5rem;
 }
@@ -221,7 +245,7 @@
 }
 
 .container .contactHolder .like:hover {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .container .contactHolder .like img {
@@ -240,7 +264,7 @@
 }
 
 .container .contactHolder .close:hover {
-  padding: .1rem;
+  padding: 0.1rem;
 }
 
 .container .contactHolder .c-left {
@@ -251,17 +275,25 @@
 .container .contactHolder .c-left img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container .contactHolder .c-right {
   width: 50%;
   height: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.1rem;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2rem 0 2rem 2rem;
 }
 
@@ -271,8 +303,12 @@
 
 .container .contactHolder .c-right .c-head .input {
   margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container .contactHolder .c-right .c-head .input .email {
@@ -301,9 +337,15 @@
   color: #ffffff;
   font-weight: bold;
   width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 0.8rem;
   padding: 1rem;
   margin-left: 1rem;
@@ -315,8 +357,12 @@
 
 .container .contactHolder .c-right .otherProjects .content {
   margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .container .contactHolder .c-right .otherProjects .content .other {
@@ -354,6 +400,8 @@
 }
 
 .container .contactHolder .c-right .imgLin {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -362,3 +410,90 @@
   cursor: pointer;
   margin-right: 2rem;
 }
+
+.container .projectPreview {
+  width: 70%;
+  margin: auto;
+  margin-top: 5rem;
+  display: none;
+}
+
+.container .projectPreview img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.container .projectPreview .projectDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  gap: 5rem;
+}
+
+.container .projectPreview .projectDesc .p-left {
+  width: 40%;
+}
+
+.container .projectPreview .projectDesc .p-left .p-name {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container .projectPreview .projectDesc .p-left .year {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.container .projectPreview .projectDesc .p-left .p-desc {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.container .projectPreview .projectDesc .p-left .p-desc:hover {
+  text-decoration: underline;
+}
+
+.container .projectPreview .projectDesc .p-left a {
+  font-size: 1.2rem;
+  display: none;
+}
+
+.container .projectPreview .projectDesc .p-right {
+  width: 60%;
+}
+
+.container .projectPreview .projectDesc .p-right .text {
+  font-size: 1.05rem;
+  font-weight: lighter;
+  line-height: 1.5rem;
+}
+
+.container .projectPreview .p-controls {
+  margin: 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .projectPreview .p-controls h5 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.container .projectPreview .p-controls h5:hover {
+  cursor: pointer;
+  color: #fd4848;
+}
+/*# sourceMappingURL=main.css.map */
