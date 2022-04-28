@@ -170,6 +170,12 @@
   margin-top: 5rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .container .aboutHolder {
+    width: 100%;
+  }
+}
+
 .container .aboutHolder .img {
   width: 100%;
   position: relative;
@@ -267,8 +273,30 @@
   gap: 5rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .container .aboutHolder .aboutText {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+  }
+}
+
 .container .aboutHolder .aboutText .a-left {
   width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .aboutHolder .aboutText .a-left {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container .aboutHolder .aboutText .a-left {
+    width: 100%;
+  }
 }
 
 .container .aboutHolder .aboutText .a-left .name {
@@ -285,6 +313,12 @@
 
 .container .aboutHolder .aboutText .a-right {
   width: 60%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .aboutHolder .aboutText .a-right {
+    width: 100%;
+  }
 }
 
 .container .aboutHolder .aboutText .a-right .more {
@@ -305,6 +339,19 @@
   bottom: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .container .contactHolder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    top: 0;
+    height: 100%;
+    padding-top: 0;
+  }
+}
+
 .container .contactHolder .like {
   position: absolute;
   right: 3rem;
@@ -314,6 +361,12 @@
   height: 6rem;
   bottom: 3rem;
   background-color: #fd4848;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .like {
+    display: none;
+  }
 }
 
 .container .contactHolder .like:hover {
@@ -335,6 +388,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .close {
+    display: none;
+  }
+}
+
 .container .contactHolder .close:hover {
   padding: 0.1rem;
 }
@@ -342,6 +401,12 @@
 .container .contactHolder .c-left {
   width: 50%;
   height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .c-left {
+    width: 100%;
+  }
 }
 
 .container .contactHolder .c-left img {
@@ -367,6 +432,13 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2rem 0 2rem 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .c-right {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 .container .contactHolder .c-right .c-head .heading {
@@ -427,6 +499,12 @@
   font-size: 1.05rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .c-right .otherProjects .heading {
+    margin-top: 1.5rem;
+  }
+}
+
 .container .contactHolder .c-right .otherProjects .content {
   margin-top: 1rem;
   display: -webkit-box;
@@ -437,8 +515,27 @@
           align-items: baseline;
 }
 
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .c-right .otherProjects .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0rem;
+  }
+}
+
 .container .contactHolder .c-right .otherProjects .content .other {
   margin-right: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .c-right .otherProjects .content .other {
+    margin-bottom: 0rem;
+  }
 }
 
 .container .contactHolder .c-right .otherProjects .content .other .heading {
@@ -475,6 +572,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .contactHolder .c-right .imgLin {
+    margin-top: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .container .contactHolder .c-right .imgLin img {
