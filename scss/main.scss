@@ -69,15 +69,20 @@ $spice-color-three: #ff6c1f;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
       transition: all ease-in-out 0.5s;
+      @media screen and(max-width:1000px) {
+      }
       &:hover {
         cursor: pointer;
         transform: rotate(360deg);
       }
     }
     @media screen and(max-width:1000px) {
-      all: unset;
+      flex-direction: row;
+      height: max-content;
+      margin-top: 3rem;
       width: 100%;
-      height: 5rem;
+      justify-content: center;
+      align-items: center;
     }
   }
 
