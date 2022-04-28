@@ -29,7 +29,6 @@ $spice-color-three: #ff6c1f;
 
     font-weight: 500;
     @media screen and(max-width:1000px) {
-      all: unset;
       margin-bottom: 1rem;
     }
   }
@@ -248,7 +247,7 @@ $spice-color-three: #ff6c1f;
     height: 0vh;
     background: rgba(0, 0, 0, 0.387);
     padding-top: 30vh;
-    z-index: 20;
+    z-index: 200;
     display: none;
     //
     bottom: 0;

@@ -26,7 +26,6 @@
 
 @media screen and (max-width: 1000px) {
   .container .navbtn {
-    all: unset;
     margin-bottom: 1rem;
   }
 }
@@ -301,7 +300,7 @@
   height: 0vh;
   background: rgba(0, 0, 0, 0.387);
   padding-top: 30vh;
-  z-index: 20;
+  z-index: 200;
   display: none;
   bottom: 0;
 }
