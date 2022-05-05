@@ -138,6 +138,9 @@
 }
 
 .container .work-div .project .p-heading {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-size: 2rem;
   margin: 2rem 0;
   color: #000000;

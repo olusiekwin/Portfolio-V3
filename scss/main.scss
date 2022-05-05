@@ -106,6 +106,7 @@ $spice-color-three: #ff6c1f;
         width: 100%;
       }
       .p-heading {
+        width: max-content;
         font-size: 2rem;
         margin: 2rem 0;
         color: $black-color;
