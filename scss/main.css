@@ -2,6 +2,16 @@
   display: none;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 .l:hover {
   color: #fd4848;
   cursor: pointer;
@@ -40,14 +50,32 @@
   top: 2rem;
 }
 
+@media screen and (max-width: 600px) {
+  .container .work {
+    display: none;
+  }
+}
+
 .container .about {
   left: 2rem;
   bottom: 2rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .container .about {
+    z-index: 1;
+  }
+}
+
 .container .contact {
   right: 2rem;
   bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .contact {
+    z-index: 1;
+  }
 }
 
 .container .socialLinks {
@@ -91,23 +119,17 @@
           transform: rotate(360deg);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .container .socialLinks {
+    width: 100%;
+    right: 0;
+    height: 6rem;
+    top: 0;
+    z-index: 1;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    margin-top: 3rem;
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -126,10 +148,10 @@
   gap: 4rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .container .work-div {
     width: 100%;
-    padding: 2rem;
+    z-index: 10;
   }
 }
 
@@ -162,6 +184,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .container .work-div .project .technologies p {
@@ -176,6 +200,14 @@
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+  margin-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 800px) {
+  .container .work-div .project {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 .container .aboutHolder {
@@ -380,7 +412,7 @@
 
 @media screen and (max-width: 1000px) {
   .container .contactHolder .like {
-    display: none;
+    bottom: 1rem;
   }
 }
 
@@ -591,13 +623,10 @@
 
 @media screen and (max-width: 1000px) {
   .container .contactHolder .c-right .imgLin {
-    margin-top: 1rem;
+    margin-top: 2rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
