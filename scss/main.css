@@ -23,58 +23,152 @@ html {
   margin: 9rem 0;
 }
 
+.container .logoS {
+  display: none;
+  background: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .logoS {
+    top: 2rem;
+    left: 2rem;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 200 !important;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container .logoS {
+    left: 1rem;
+    font-size: 2rem;
+  }
+}
+
 .container .plateHolder {
   display: block;
 }
 
-.container .navbtn {
+.container .menu {
+  position: fixed;
+  z-index: 20;
+  height: 2.2rem;
+  display: none;
+  background: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .menu {
+    display: block;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container .menu {
+    right: 1rem;
+    top: 1.8rem;
+  }
+}
+
+.container .nav {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .nav {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 6rem;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    z-index: 40;
+  }
+}
+
+.container .nav .navbtn {
   position: fixed;
   font-size: 2.05rem;
-  z-index: 12;
+  z-index: 1;
   font-weight: 500;
 }
 
 @media screen and (max-width: 1000px) {
-  .container .navbtn {
-    margin-bottom: 1rem;
+  .container .nav .navbtn {
+    all: unset;
+    margin-bottom: 2rem;
+    font-size: 2rem;
   }
 }
 
-.container .logo {
+.container .nav .logo {
   left: 2rem;
   top: 2rem;
 }
 
-.container .work {
+@media screen and (max-width: 1000px) {
+  .container .nav .logo {
+    top: 2rem;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 200 !important;
+    font-size: 2.5rem;
+    display: none;
+  }
+}
+
+.container .nav .work {
   right: 2rem;
   top: 2rem;
 }
 
 @media screen and (max-width: 600px) {
-  .container .work {
-    display: none;
+  .container .nav .work {
+    all: unset;
+    margin-bottom: 2rem;
+    font-size: 2rem;
   }
 }
 
-.container .about {
+.container .nav .about {
   left: 2rem;
   bottom: 2rem;
 }
 
 @media screen and (max-width: 1000px) {
-  .container .about {
-    z-index: 1;
+  .container .nav .about {
+    all: unset;
+    margin-bottom: 2rem;
+    font-size: 2rem;
   }
 }
 
-.container .contact {
+.container .nav .contact {
   right: 2rem;
   bottom: 2rem;
 }
 
 @media screen and (max-width: 1000px) {
-  .container .contact {
-    z-index: 1;
+  .container .nav .contact {
+    all: unset;
+    font-size: 2rem;
   }
 }
 
@@ -98,6 +192,12 @@ html {
           justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+  .container .socialLinks {
+    z-index: 20;
+  }
+}
+
 .container .socialLinks img {
   border-radius: 50%;
   outline: 2px solid transparent;
@@ -117,6 +217,12 @@ html {
   cursor: pointer;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+@media screen and (max-width: 600px) {
+  .container .socialLinks .ig {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -151,7 +257,7 @@ html {
 @media screen and (max-width: 800px) {
   .container .work-div {
     width: 100%;
-    z-index: 10;
+    z-index: 4;
   }
 }
 
@@ -168,6 +274,12 @@ html {
   color: #000000;
 }
 
+@media screen and (max-width: 800px) {
+  .container .work-div .project .p-heading {
+    font-size: 1.5rem;
+  }
+}
+
 .container .work-div .project .p-heading:hover {
   color: #fd4848;
 }
@@ -177,6 +289,12 @@ html {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   font-family: neueLight;
+}
+
+@media screen and (max-width: 800px) {
+  .container .work-div .project .p-about {
+    font-size: 1.1rem;
+  }
 }
 
 .container .work-div .project .technologies {
@@ -204,6 +322,13 @@ html {
 }
 
 @media screen and (max-width: 800px) {
+  .container .work-div .project .technologies p {
+    font-size: 0.6rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .container .work-div .project {
     width: 100%;
     padding: 1rem;
@@ -214,12 +339,13 @@ html {
   width: 70%;
   display: none;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 @media screen and (max-width: 1000px) {
   .container .aboutHolder {
     width: 100%;
+    margin-top: 0;
   }
 }
 
@@ -227,6 +353,12 @@ html {
   width: 100%;
   position: relative;
   min-height: 35rem;
+}
+
+@media screen and (max-width: 800px) {
+  .container .aboutHolder .img {
+    min-height: 20rem;
+  }
 }
 
 .container .aboutHolder .img img {
@@ -241,7 +373,7 @@ html {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 49;
+  z-index: 1;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -255,6 +387,13 @@ html {
   margin: auto;
   overflow: hidden;
   background-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+  .container .aboutHolder .img #container #circle {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 .container .aboutHolder .img #container #circle .text {
@@ -283,6 +422,13 @@ html {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+
+@media screen and (max-width: 800px) {
+  .container .aboutHolder .img #container #circle svg {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 @-webkit-keyframes rotate {
@@ -353,9 +499,21 @@ html {
   font-weight: 200;
 }
 
+@media screen and (max-width: 800px) {
+  .container .aboutHolder .aboutText .a-left .name {
+    font-size: 1.8rem;
+  }
+}
+
 .container .aboutHolder .aboutText .a-left .nameText {
   font-size: 1.3rem;
   line-height: 1.7rem;
+}
+
+@media screen and (max-width: 800px) {
+  .container .aboutHolder .aboutText .a-left .nameText {
+    font-size: 1rem;
+  }
 }
 
 .container .aboutHolder .aboutText .a-right {
@@ -381,7 +539,7 @@ html {
   height: 0vh;
   background: rgba(0, 0, 0, 0.387);
   padding-top: 30vh;
-  z-index: 200;
+  z-index: 11;
   display: none;
   bottom: 0;
 }
@@ -412,7 +570,10 @@ html {
 
 @media screen and (max-width: 1000px) {
   .container .contactHolder .like {
-    bottom: 1rem;
+    bottom: 0.5rem;
+    right: 1rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 
@@ -581,7 +742,7 @@ html {
 
 @media screen and (max-width: 1000px) {
   .container .contactHolder .c-right .otherProjects .content .other {
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
   }
 }
 

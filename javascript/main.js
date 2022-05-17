@@ -18,10 +18,16 @@ function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 contact.addEventListener("click", function () {
+  scrollToTop();
+
   contactHolder.style.height = "100vh";
   contactHolder.style.display = "flex";
+  projectPreview.style.display = "none";
+
+  aboutHolder.style.display = "none";
+  workHolder.style.display = "none";
+  updateNav();
 });
 
 work.addEventListener("click", function () {
@@ -31,6 +37,7 @@ work.addEventListener("click", function () {
   aboutHolder.style.display = "none";
   contactHolder.style.display = "none";
   workHolder.style.display = "block";
+  updateNav();
 });
 
 logo.addEventListener("click", function () {
@@ -40,6 +47,7 @@ logo.addEventListener("click", function () {
   aboutHolder.style.display = "none";
   contactHolder.style.display = "none";
   workHolder.style.display = "block";
+  updateNav();
 });
 
 about.addEventListener("click", function () {
@@ -49,6 +57,7 @@ about.addEventListener("click", function () {
   aboutHolder.style.display = "block";
   contactHolder.style.display = "none";
   workHolder.style.display = "none";
+  updateNav();
 });
 
 closeContact.addEventListener("click", function () {
@@ -56,45 +65,22 @@ closeContact.addEventListener("click", function () {
   contactHolder.style.display = "none";
 });
 
-const pHeading = document.querySelectorAll(".p-heading");
-console.log(pHeading);
+const menuBtn = document.querySelector(".menu");
 
-pHeading.forEach((pHeading) =>
-  pHeading.addEventListener("click", function () {
-    scrollToTop();
+const menuWrapper = document.querySelector(".nav");
 
-    aboutHolder.style.display = "none";
-    contactHolder.style.display = "none";
-    workHolder.style.display = "none";
-    projectPreview.style.display = "block";
-  })
-);
-
-// Pages Navigations End
-
-// Project showroom start
-var activeProject = 1; //holds the value of project to show
-
-const pnext = document.querySelector(".p-next");
-const pprev = document.querySelector(".p-prev");
-const pall = document.querySelector(".allprojects");
-
-pall.addEventListener("click", function () {
-  scrollToTop();
-  projectPreview.style.display = "none";
-
-  aboutHolder.style.display = "none";
-  contactHolder.style.display = "none";
-  workHolder.style.display = "block";
+menuBtn.addEventListener("click", function () {
+  updateNav();
 });
+function updateNav() {
+  menuWrapper.classList.toggle("isOpen");
 
-pnext.addEventListener("click", function () {
-  scrollToTop();
-  activeProject--;
-});
-pprev.addEventListener("click", function () {
-  scrollToTop();
-  activeProject++;
-});
+  if (menuWrapper.classList.contains("isOpen")) {
+    menuWrapper.style.height = "40vh";
 
-// Project showroom end
+    menuWrapper.style.display = "flex";
+  } else {
+    menuWrapper.style.height = "0vh";
+    menuWrapper.style.display = "none";
+  }
+}

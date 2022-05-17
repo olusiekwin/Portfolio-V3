@@ -25,45 +25,109 @@ html {
   position: relative;
   margin: 9rem 0;
 
+  .logoS {
+    display: none;
+    background: transparent;
+    @media screen and(max-width:1000px) {
+      top: 2rem;
+      left: 2rem;
+      position: fixed;
+      display: flex;
+      z-index: 200 !important;
+      font-size: 2.5rem;
+    }
+    @media screen and(max-width:600px) {
+      left: 1rem;
+      font-size: 2rem;
+    }
+  }
   .plateHolder {
     display: block; // for main
   }
-  .navbtn {
+  .menu {
     position: fixed;
-    font-size: 2.05rem;
-    z-index: 12;
-
-    font-weight: 500;
+    z-index: 20;
+    height: 2.2rem;
+    display: none;
+    background: transparent;
     @media screen and(max-width:1000px) {
-      margin-bottom: 1rem;
+      display: block;
+      top: 2rem;
+      right: 2rem;
     }
-  }
-  .logo {
-    left: 2rem;
-    top: 2rem;
-  }
-  .work {
-    right: 2rem;
-    top: 2rem;
     @media screen and(max-width:600px) {
+      right: 1rem;
+      top: 1.8rem;
+    }
+  }
+  .nav {
+    width: 100%;
+    @media screen and(max-width:1000px) {
+      width: 100%;
+      height: 0;
+      position: fixed;
+      top: 6rem;
       display: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      overflow: hidden;
+      z-index: 40;
     }
-  }
-  .about {
-    left: 2rem;
-    bottom: 2rem;
     @media screen and(max-width:1000px) {
-      z-index: 1;
     }
-  }
-  .contact {
-    right: 2rem;
-    bottom: 2rem;
-    @media screen and(max-width:1000px) {
-      z-index: 1;
-    }
-  }
 
+    .navbtn {
+      position: fixed;
+      font-size: 2.05rem;
+      z-index: 1;
+
+      font-weight: 500;
+      @media screen and(max-width:1000px) {
+        all: unset;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+    }
+    .logo {
+      left: 2rem;
+      top: 2rem;
+      @media screen and(max-width:1000px) {
+        top: 2rem;
+        position: fixed;
+        display: flex;
+        z-index: 200 !important;
+        font-size: 2.5rem;
+        display: none;
+      }
+    }
+    .work {
+      right: 2rem;
+      top: 2rem;
+      @media screen and(max-width:600px) {
+        all: unset;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+    }
+    .about {
+      left: 2rem;
+      bottom: 2rem;
+      @media screen and(max-width:1000px) {
+        all: unset;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+    }
+    .contact {
+      right: 2rem;
+      bottom: 2rem;
+      @media screen and(max-width:1000px) {
+        all: unset;
+        font-size: 2rem;
+      }
+    }
+  }
   .socialLinks {
     position: fixed;
     display: flex;
@@ -74,7 +138,9 @@ html {
     align-items: center;
     justify-content: center;
     @media screen and(max-width:600px) {
+      z-index: 20;
     }
+
     img {
       border-radius: 50%;
       outline: 2px solid transparent;
@@ -91,6 +157,11 @@ html {
       &:hover {
         cursor: pointer;
         transform: rotate(360deg);
+      }
+    }
+    .ig {
+      @media screen and(max-width:600px) {
+        display: none;
       }
     }
     @media screen and(max-width:800px) {
@@ -116,7 +187,7 @@ html {
 
     @media screen and(max-width:800px) {
       width: 100%;
-      z-index: 10;
+      z-index: 4;
     }
     .project {
       .p-image {
@@ -127,6 +198,9 @@ html {
         font-size: 2rem;
         margin: 2rem 0;
         color: $black-color;
+        @media screen and(max-width:800px) {
+          font-size: 1.5rem;
+        }
         &:hover {
           color: $spice-color-one;
         }
@@ -137,6 +211,9 @@ html {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
         font-family: neueLight;
+        @media screen and(max-width:800px) {
+          font-size: 1.1rem;
+        }
       }
       .technologies {
         width: 100%;
@@ -155,6 +232,10 @@ html {
           -ms-border-radius: 25px;
           -o-border-radius: 25px;
           margin-bottom: 0.7rem;
+          @media screen and(max-width:800px) {
+            font-size: 0.6rem;
+            margin-right: 1rem;
+          }
         }
       }
 
@@ -169,14 +250,20 @@ html {
     width: 70%;
     display: none;
     margin: auto;
-    margin-top: 5rem;
+
+    margin-top: 4rem;
+
     @media screen and(max-width:1000px) {
       width: 100%;
+      margin-top: 0;
     }
     .img {
       width: 100%;
       position: relative;
       min-height: 35rem;
+      @media screen and(max-width:800px) {
+        min-height: 20rem;
+      }
 
       img {
         max-height: 35rem;
@@ -189,7 +276,7 @@ html {
         position: absolute;
         right: 0;
         bottom: 0;
-        z-index: 49;
+        z-index: 1;
         height: max-content;
         background-color: transparent;
 
@@ -200,6 +287,11 @@ html {
           margin: auto;
           overflow: hidden;
           background-color: transparent;
+
+          @media screen and(max-width:800px) {
+            width: 15rem;
+            height: 15rem;
+          }
 
           .text {
             color: $spice-color-one;
@@ -215,6 +307,10 @@ html {
             top: 0;
             width: 20rem;
             height: 20rem;
+            @media screen and(max-width:800px) {
+              width: 15rem;
+              height: 15rem;
+            }
             background-color: transparent;
 
             -webkit-animation-name: rotate;
@@ -266,10 +362,16 @@ html {
           line-height: 3.5rem;
           margin-bottom: 3rem;
           font-weight: 200;
+          @media screen and(max-width:800px) {
+            font-size: 1.8rem;
+          }
         }
         .nameText {
           font-size: 1.3rem;
           line-height: 1.7rem;
+          @media screen and(max-width:800px) {
+            font-size: 1rem;
+          }
         }
       }
       .a-right {
@@ -293,7 +395,7 @@ html {
     height: 0vh;
     background: rgba(0, 0, 0, 0.387);
     padding-top: 30vh;
-    z-index: 200;
+    z-index: 11;
     display: none;
     //
     bottom: 0;
@@ -316,7 +418,10 @@ html {
       bottom: 3rem;
       background-color: $spice-color-one;
       @media screen and(max-width:1000px) {
-        bottom: 1rem;
+        bottom: 0.5rem;
+        right: 1rem;
+        width: 5rem;
+        height: 5rem;
       }
       &:hover {
         padding: 0.5rem;
@@ -431,7 +536,7 @@ html {
             margin-right: 2rem;
 
             @media screen and(max-width:1000px) {
-              margin-bottom: 0rem;
+              margin-bottom: 1rem;
             }
             .heading {
               font-size: 1rem;
