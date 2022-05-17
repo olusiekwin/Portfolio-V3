@@ -18,6 +18,7 @@ function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+let active = 1;
 contact.addEventListener("click", function () {
   scrollToTop();
 
@@ -37,6 +38,7 @@ work.addEventListener("click", function () {
   aboutHolder.style.display = "none";
   contactHolder.style.display = "none";
   workHolder.style.display = "block";
+  active = 1;
   updateNav();
 });
 
@@ -47,6 +49,8 @@ logo.addEventListener("click", function () {
   aboutHolder.style.display = "none";
   contactHolder.style.display = "none";
   workHolder.style.display = "block";
+  active = 1;
+
   updateNav();
 });
 
@@ -57,12 +61,23 @@ about.addEventListener("click", function () {
   aboutHolder.style.display = "block";
   contactHolder.style.display = "none";
   workHolder.style.display = "none";
+  active = 2;
+
   updateNav();
 });
 
 closeContact.addEventListener("click", function () {
   contactHolder.style.height = "0vh";
   contactHolder.style.display = "none";
+  if (active == 1) {
+    console.log(active);
+    workHolder.style.display = "block";
+  } else if (active == 2) {
+    console.log(active);
+
+    aboutHolder.style.display = "block";
+  } else {
+  }
 });
 
 const menuBtn = document.querySelector(".menu");
@@ -76,11 +91,11 @@ function updateNav() {
   menuWrapper.classList.toggle("isOpen");
 
   if (menuWrapper.classList.contains("isOpen")) {
+    menuBtn.src = "assets/close-line.svg";
     menuWrapper.style.height = "40vh";
-
-    menuWrapper.style.display = "flex";
   } else {
     menuWrapper.style.height = "0vh";
-    menuWrapper.style.display = "none";
+
+    menuBtn.src = "assets/three-horizontal-lines.svg";
   }
 }

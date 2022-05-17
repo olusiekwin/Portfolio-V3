@@ -55,9 +55,11 @@ html {
 .container .menu {
   position: fixed;
   z-index: 20;
-  height: 2.2rem;
+  height: 1.8rem;
   display: none;
   background: transparent;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 @media screen and (max-width: 1000px) {
@@ -72,6 +74,7 @@ html {
   .container .menu {
     right: 1rem;
     top: 1.8rem;
+    height: 1.7rem;
   }
 }
 
@@ -85,7 +88,9 @@ html {
     height: 0;
     position: fixed;
     top: 6rem;
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -357,12 +362,12 @@ html {
 
 @media screen and (max-width: 800px) {
   .container .aboutHolder .img {
-    min-height: 20rem;
+    min-height: 25rem;
   }
 }
 
 .container .aboutHolder .img img {
-  max-height: 35rem;
+  min-height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -527,7 +532,7 @@ html {
 }
 
 .container .aboutHolder .aboutText .a-right .more {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   font-size: 1.05rem;
   font-weight: lighter;
   line-height: 1.5rem;
@@ -544,7 +549,7 @@ html {
   bottom: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   .container .contactHolder {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -596,7 +601,7 @@ html {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   .container .contactHolder .close {
     display: none;
   }
@@ -811,6 +816,12 @@ html {
   margin: auto;
   margin-top: 5rem;
   display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .projectPreview {
+    width: 90%;
+  }
 }
 
 .container .projectPreview img {
