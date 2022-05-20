@@ -1,0 +1,154 @@
+$black-color: #000000;
+$white-color: #ffffff;
+$background-color: #f8f8f8;
+$spice-color-one: #fd4848;
+$spice-color-two: #4974fc;
+$spice-color-three: #ff6c1f;
+
+.aboutHolder {
+  width: 70%;
+  display: none;
+  margin: auto;
+
+  margin-top: 4rem;
+
+  @media screen and(max-width:1000px) {
+    width: 100%;
+    margin-top: 0;
+  }
+  .img {
+    width: 100%;
+    position: relative;
+    height: 35rem;
+    @media screen and(max-width:800px) {
+      height: 25rem;
+    }
+
+    img {
+      height: 35rem;
+      object-fit: cover;
+      width: 100%;
+
+      position: absolute;
+      @media screen and(max-width:800px) {
+        height: 25rem;
+      }
+    }
+
+    #container {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: max-content;
+      background-color: transparent;
+      @media screen and(max-width:800px) {
+        height: 25rem;
+      }
+      #circle {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        margin: auto;
+        overflow: hidden;
+        background-color: transparent;
+
+        @media screen and(max-width:800px) {
+          width: 15rem;
+          height: 15rem;
+        }
+
+        .text {
+          color: $spice-color-one;
+          font-weight: bold;
+          background-color: transparent;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        svg {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 20rem;
+          height: 20rem;
+          @media screen and(max-width:800px) {
+            width: 15rem;
+            height: 15rem;
+          }
+          background-color: transparent;
+
+          -webkit-animation-name: rotate;
+
+          animation-name: rotate;
+
+          animation-duration: 3s;
+
+          -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+
+          animation-timing-function: linear;
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(360deg);
+          -webkit-filter: blur(1px);
+        }
+        to {
+          transform: rotate(0);
+
+          -webkit-filter: blur(0px);
+        }
+      }
+    }
+    //
+  }
+  .aboutText {
+    display: flex;
+    width: 100%;
+    margin-top: 4rem;
+    gap: 5rem;
+    @media screen and(max-width:1000px) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    .a-left {
+      width: 40%;
+      @media screen and(max-width:1000px) {
+        width: 70%;
+      }
+      @media screen and(max-width:750px) {
+        width: 100%;
+      }
+      .name {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        margin-bottom: 3rem;
+        font-weight: 200;
+        @media screen and(max-width:800px) {
+          font-size: 1.8rem;
+        }
+      }
+      .nameText {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        @media screen and(max-width:800px) {
+          font-size: 1rem;
+        }
+      }
+    }
+    .a-right {
+      width: 60%;
+      @media screen and(max-width:1000px) {
+        width: 100%;
+      }
+      .more {
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+        font-weight: lighter;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+$black-color: #000000;
+$white-color: #ffffff;
+$background-color: #f8f8f8;
+$spice-color-one: #fd4848;
+$spice-color-two: #4974fc;
+$spice-color-three: #ff6c1f;
+.work-div {
+  align-self: center;
+  width: 60%;
+  margin: auto;
+  flex-wrap: wrap;
+  height: auto;
+  margin-top: 4rem;
+
+  display: flex;
+  gap: 4rem;
+  .intro-container {
+    width: 100%;
+    position: relative;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: solid 2px black;
+    .nameMe {
+      text-transform: uppercase;
+      color: black;
+      font-size: 3rem;
+      text-align: center;
+      font-family: jost;
+      background-color: transparent;
+      @media screen and(max-width:800px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media screen and(max-width:800px) {
+    width: 100%;
+    z-index: 4;
+  }
+  .project {
+    .p-image {
+      width: 100%;
+    }
+    .p-heading {
+      width: max-content;
+      font-size: 2rem;
+      margin: 2rem 0;
+      color: $black-color;
+      @media screen and(max-width:800px) {
+        font-size: 1.5rem;
+      }
+      &:hover {
+        color: $spice-color-one;
+      }
+    }
+
+    .p-about {
+      color: $black-color;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      font-family: neueLight;
+      @media screen and(max-width:800px) {
+        font-size: 1.1rem;
+      }
+    }
+    .technologies {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        border-radius: 25px;
+        padding: 0.4rem 1rem;
+        color: #ff0000;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.09rem;
+        margin-right: 2rem;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        margin-bottom: 0.7rem;
+        @media screen and(max-width:800px) {
+          font-size: 0.6rem;
+          margin-right: 1rem;
+        }
+        // child
+        &:nth-child(1) {
+          background-color: rgba(255, 0, 0, 0.308);
+        }
+        &:nth-child(2) {
+          background-color: rgba(17, 161, 245, 0.308);
+        }
+        &:nth-child(3) {
+          background-color: rgba(0, 255, 13, 0.308);
+        }
+        &:nth-child(4) {
+          background-color: rgba(238, 255, 0, 0.308);
+        }
+        &:nth-child(5) {
+          background-color: rgba(179, 255, 0, 0.178);
+        }
+      }
+    }
+
+    @media screen and(max-width:800px) {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}

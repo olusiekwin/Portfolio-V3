@@ -1,0 +1,98 @@
+$black-color: #000000;
+$white-color: #ffffff;
+$background-color: #f8f8f8;
+$spice-color-one: #fd4848;
+$spice-color-two: #4974fc;
+$spice-color-three: #ff6c1f;
+.projectPreview {
+  width: 70%;
+  margin: auto;
+  margin-top: 5rem;
+  display: none;
+  @media screen and(max-width:1000px) {
+    width: 90%;
+  }
+  @media screen and(max-width:600px) {
+    width: 95%;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    margin-top: 1rem;
+    &:nth-child(1) {
+      width: 100%;
+    }
+  }
+
+  .projectDesc {
+    display: flex;
+    justify-content: baseline;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    gap: 5rem;
+    @media screen and(max-width:600px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .p-left {
+      width: 40%;
+      @media screen and(max-width:600px) {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .p-name {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        @media screen and(max-width:600px) {
+          font-size: 1.8rem;
+        }
+      }
+      .year {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .p-desc {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      a {
+        font-size: 1.2rem;
+        display: none;
+      }
+    }
+    .p-right {
+      width: 60%;
+      @media screen and(max-width:600px) {
+        width: 100%;
+      }
+      .text {
+        font-size: 1.05rem;
+        font-weight: lighter;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  .p-controls {
+    margin: 2.5rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    h5 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      @media screen and(max-width:600px) {
+        font-size: 1.2rem;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $spice-color-one;
+      }
+    }
+  }
+}

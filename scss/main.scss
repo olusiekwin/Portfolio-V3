@@ -5,6 +5,11 @@ $spice-color-one: #fd4848;
 $spice-color-two: #4974fc;
 $spice-color-three: #ff6c1f;
 
+@import "about";
+@import "contact";
+@import "projectPrev";
+@import "work";
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -23,7 +28,26 @@ html {
 .container {
   width: 100%;
   position: relative;
-  margin: 9rem 0;
+  margin: 3rem 0;
+  .copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: auto;
+    width: 90%;
+    margin-top: 4rem;
+    @media screen and(max-width:1000px) {
+      font-size: 0.8rem;
+    }
+    span {
+      font-size: 0.9rem;
+
+      color: #fd4848;
+      cursor: grab;
+    }
+    @media screen and(max-width:1000px) {
+      font-size: 0.8rem;
+    }
+  }
 
   .logoS {
     display: none;
@@ -64,17 +88,18 @@ html {
   }
   .nav {
     width: 100%;
+    overflow: hidden;
 
     @media screen and(max-width:1000px) {
       width: 100%;
-      height: 0;
       position: fixed;
       top: 6rem;
+      height: 0;
+
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      overflow: hidden;
       z-index: 40;
     }
     @media screen and(max-width:1000px) {
@@ -174,494 +199,6 @@ html {
       top: 0;
       z-index: 1;
       flex-direction: row;
-    }
-  }
-
-  .work-div {
-    align-self: center;
-    width: 60%;
-    margin: auto;
-    flex-wrap: wrap;
-    height: auto;
-    margin-top: 4rem;
-
-    display: flex;
-    gap: 4rem;
-
-    @media screen and(max-width:800px) {
-      width: 100%;
-      z-index: 4;
-    }
-    .project {
-      .p-image {
-        width: 100%;
-      }
-      .p-heading {
-        width: max-content;
-        font-size: 2rem;
-        margin: 2rem 0;
-        color: $black-color;
-        @media screen and(max-width:800px) {
-          font-size: 1.5rem;
-        }
-        &:hover {
-          color: $spice-color-one;
-        }
-      }
-
-      .p-about {
-        color: $black-color;
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-        font-family: neueLight;
-        @media screen and(max-width:800px) {
-          font-size: 1.1rem;
-        }
-      }
-      .technologies {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        p {
-          border-radius: 25px;
-          background-color: rgba(255, 0, 0, 0.089);
-          padding: 0.4rem 1rem;
-          color: $spice-color-one;
-          font-size: 0.8rem;
-          font-weight: bold;
-          margin-right: 2rem;
-          -webkit-border-radius: 25px;
-          -moz-border-radius: 25px;
-          -ms-border-radius: 25px;
-          -o-border-radius: 25px;
-          margin-bottom: 0.7rem;
-          @media screen and(max-width:800px) {
-            font-size: 0.6rem;
-            margin-right: 1rem;
-          }
-        }
-      }
-
-      @media screen and(max-width:800px) {
-        width: 100%;
-        padding: 1rem;
-      }
-    }
-  }
-
-  .aboutHolder {
-    width: 70%;
-    display: none;
-    margin: auto;
-
-    margin-top: 4rem;
-
-    @media screen and(max-width:1000px) {
-      width: 100%;
-      margin-top: 0;
-    }
-    .img {
-      width: 100%;
-      position: relative;
-      min-height: 35rem;
-      @media screen and(max-width:800px) {
-        min-height: 25rem;
-      }
-
-      img {
-        min-height: 25rem;
-        object-fit: cover;
-        width: 100%;
-        position: absolute;
-      }
-
-      #container {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-        height: max-content;
-        background-color: transparent;
-        @media screen and(max-width:800px) {
-        }
-        #circle {
-          position: relative;
-          width: 20rem;
-          height: 20rem;
-          margin: auto;
-          overflow: hidden;
-          background-color: transparent;
-
-          @media screen and(max-width:800px) {
-            width: 15rem;
-            height: 15rem;
-          }
-
-          .text {
-            color: $spice-color-one;
-            font-weight: bold;
-            background-color: transparent;
-            display: flex;
-            justify-content: space-around;
-          }
-
-          svg {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 20rem;
-            height: 20rem;
-            @media screen and(max-width:800px) {
-              width: 15rem;
-              height: 15rem;
-            }
-            background-color: transparent;
-
-            -webkit-animation-name: rotate;
-
-            animation-name: rotate;
-
-            animation-duration: 3s;
-
-            -o-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-
-            animation-timing-function: linear;
-          }
-        }
-
-        @keyframes rotate {
-          from {
-            transform: rotate(360deg);
-            -webkit-filter: blur(1px);
-          }
-          to {
-            transform: rotate(0);
-
-            -webkit-filter: blur(0px);
-          }
-        }
-      }
-      //
-    }
-    .aboutText {
-      display: flex;
-      width: 100%;
-      margin-top: 4rem;
-      gap: 5rem;
-      @media screen and(max-width:1000px) {
-        flex-direction: column;
-        padding: 1rem;
-      }
-      .a-left {
-        width: 40%;
-        @media screen and(max-width:1000px) {
-          width: 70%;
-        }
-        @media screen and(max-width:750px) {
-          width: 100%;
-        }
-        .name {
-          font-size: 2.5rem;
-          line-height: 3.5rem;
-          margin-bottom: 3rem;
-          font-weight: 200;
-          @media screen and(max-width:800px) {
-            font-size: 1.8rem;
-          }
-        }
-        .nameText {
-          font-size: 1.3rem;
-          line-height: 1.7rem;
-          @media screen and(max-width:800px) {
-            font-size: 1rem;
-          }
-        }
-      }
-      .a-right {
-        width: 60%;
-        @media screen and(max-width:1000px) {
-          width: 100%;
-        }
-        .more {
-          margin-bottom: 1rem;
-          font-size: 1.05rem;
-          font-weight: lighter;
-          line-height: 1.5rem;
-        }
-      }
-    }
-  }
-
-  .contactHolder {
-    width: 100%;
-    position: fixed;
-    height: 0vh;
-    background: rgba(0, 0, 0, 0.387);
-    padding-top: 30vh;
-    z-index: 11;
-    display: none;
-    //
-    bottom: 0;
-    // close and like btn
-    @media screen and(max-width:600px) {
-      flex-direction: column;
-      position: relative;
-      top: 0;
-      height: 100%;
-      padding-top: 0;
-    }
-
-    .like {
-      position: absolute;
-      right: 3rem;
-      width: 6rem;
-      cursor: pointer;
-      border-radius: 50%;
-      height: 6rem;
-      bottom: 3rem;
-      background-color: $spice-color-one;
-      @media screen and(max-width:1000px) {
-        bottom: 0.5rem;
-        right: 1rem;
-        width: 5rem;
-        height: 5rem;
-      }
-      &:hover {
-        padding: 0.5rem;
-      }
-      img {
-        border-radius: 50%;
-      }
-    }
-    .close {
-      position: absolute;
-      top: 3rem;
-      right: 3rem;
-      background-color: transparent;
-      height: 1.5rem;
-      width: 1.5rem;
-      margin-top: 30vh;
-      cursor: pointer;
-      @media screen and(max-width:600px) {
-        display: none;
-      }
-      &:hover {
-        padding: 0.1rem;
-      }
-    }
-
-    .c-left {
-      width: 50%;
-      height: 100%;
-      @media screen and(max-width:1000px) {
-        width: 100%;
-      }
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    .c-right {
-      width: 50%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      font-size: 1.1rem;
-
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 2rem 0 2rem 2rem;
-      @media screen and(max-width:1000px) {
-        width: 100%;
-        padding: 1rem;
-      }
-      .c-head {
-        .heading {
-          font-size: 1.05rem;
-        }
-        .input {
-          margin-top: 1rem;
-          display: flex;
-
-          align-items: center;
-          .email {
-            all: unset;
-            outline: 1px solid $black-color;
-            padding-left: 1rem;
-            text-align: left;
-            width: 13rem;
-            height: 2.5rem;
-            border-radius: 2px;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            -ms-border-radius: 2px;
-            -o-border-radius: 2px;
-            &:focus {
-              outline: 1px solid $spice-color-one;
-            }
-          }
-          .p-subscribe {
-            cursor: pointer;
-            border-radius: 50%;
-            height: 5rem;
-            background-color: $spice-color-one;
-            color: $white-color;
-            font-weight: bold;
-            width: 5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            padding: 1rem;
-            margin-left: 1rem;
-          }
-        }
-      }
-      .otherProjects {
-        .heading {
-          font-size: 1.05rem;
-          @media screen and(max-width:1000px) {
-            margin-top: 1.5rem;
-          }
-        }
-        .content {
-          margin-top: 1rem;
-
-          display: flex;
-          align-items: baseline;
-          @media screen and(max-width:1000px) {
-            display: flex;
-            flex-direction: column;
-            margin-top: 0rem;
-          }
-          .other {
-            margin-right: 2rem;
-
-            @media screen and(max-width:1000px) {
-              margin-bottom: 1rem;
-            }
-            .heading {
-              font-size: 1rem;
-
-              margin-bottom: 0.7rem;
-            }
-            .link {
-              color: $black-color;
-              font-size: 1.2rem;
-              font-weight: lighter;
-
-              &:hover {
-                color: $spice-color-one;
-              }
-            }
-          }
-        }
-      }
-      .feedback {
-        .heading {
-          font-size: 1rem;
-          margin-bottom: 0.7rem;
-        }
-        .link {
-          color: $black-color;
-          font-size: 1.2rem;
-          font-weight: lighter;
-          &:hover {
-            color: $spice-color-one;
-          }
-        }
-      }
-      .imgLin {
-        display: flex;
-        @media screen and(max-width:1000px) {
-          margin-top: 2rem;
-          align-items: center;
-        }
-        img {
-          margin-right: 2rem;
-
-          height: 2rem;
-          width: 2rem;
-          cursor: pointer;
-          transition: all ease-in-out 0.5s;
-          &:hover {
-            cursor: pointer;
-            transform: rotate(360deg);
-          }
-        }
-      }
-      // continue
-    }
-  }
-
-  .projectPreview {
-    width: 70%;
-    margin: auto;
-    margin-top: 5rem;
-    display: none;
-    @media screen and(max-width:1000px) {
-      width: 90%;
-    }
-    img {
-      object-fit: cover;
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    .projectDesc {
-      display: flex;
-      justify-content: baseline;
-      width: 100%;
-      margin-top: 4rem;
-      margin-bottom: 8rem;
-      gap: 5rem;
-      .p-left {
-        width: 40%;
-
-        .p-name {
-          font-size: 2rem;
-          margin-bottom: 2rem;
-        }
-        .year {
-          font-size: 1.2rem;
-          margin-bottom: 2rem;
-        }
-        .p-desc {
-          font-size: 1.2rem;
-          line-height: 1.5rem;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-        a {
-          font-size: 1.2rem;
-          display: none;
-        }
-      }
-      .p-right {
-        width: 60%;
-        .text {
-          font-size: 1.05rem;
-          font-weight: lighter;
-          line-height: 1.5rem;
-        }
-      }
-    }
-    .p-controls {
-      margin: 2.5rem 0;
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      h5 {
-        font-size: 1.8rem;
-        font-weight: 400;
-        &:hover {
-          cursor: pointer;
-          color: $spice-color-one;
-        }
-      }
     }
   }
 }

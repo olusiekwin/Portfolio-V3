@@ -88,14 +88,17 @@ menuBtn.addEventListener("click", function () {
   updateNav();
 });
 function updateNav() {
-  menuWrapper.classList.toggle("isOpen");
+  console.log(window.innerHeight);
+  if (window.innerWidth < 1000) {
+    menuWrapper.classList.toggle("isOpen");
 
-  if (menuWrapper.classList.contains("isOpen")) {
-    menuBtn.src = "assets/close-line.svg";
-    menuWrapper.style.height = "40vh";
-  } else {
-    menuWrapper.style.height = "0vh";
+    if (menuWrapper.classList.contains("isOpen")) {
+      menuBtn.src = "assets/close-line.svg";
+      menuWrapper.style.height = "40vh";
+    } else {
+      menuWrapper.style.height = "0vh";
 
-    menuBtn.src = "assets/three-horizontal-lines.svg";
+      menuBtn.src = "assets/three-horizontal-lines.svg";
+    }
   }
 }

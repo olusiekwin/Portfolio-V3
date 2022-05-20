@@ -1,0 +1,210 @@
+.contactHolder {
+  width: 100%;
+  position: fixed;
+  height: 0vh;
+  background: rgba(0, 0, 0, 0.452);
+  padding-top: 30vh;
+  z-index: 11;
+  display: none;
+  //
+  bottom: 0;
+  // close and like btn
+  @media screen and(max-width:600px) {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    overflow: scroll;
+    height: 100%;
+    padding-top: 0;
+  }
+
+  .like {
+    position: absolute;
+    right: 3rem;
+    width: 6rem;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 6rem;
+    bottom: 3rem;
+    background-color: $spice-color-one;
+    @media screen and(max-width:1000px) {
+      bottom: 0.5rem;
+      right: 1rem;
+      width: 5rem;
+      height: 5rem;
+    }
+    &:hover {
+      padding: 0.5rem;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background-color: transparent;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: 30vh;
+    cursor: pointer;
+    @media screen and(max-width:600px) {
+      display: none;
+    }
+    &:hover {
+      padding: 0.1rem;
+    }
+  }
+
+  .c-left {
+    width: 50%;
+    height: 100%;
+    @media screen and(max-width:1000px) {
+      width: 100%;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .c-right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    font-size: 1.1rem;
+
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0 2rem 2rem;
+    @media screen and(max-width:1000px) {
+      width: 100%;
+      padding: 1rem;
+    }
+    .c-head {
+      .heading {
+        font-size: 1.05rem;
+      }
+      .input {
+        margin-top: 1rem;
+        display: flex;
+
+        @media screen and(max-width:800px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        align-items: center;
+        .email {
+          all: unset;
+          outline: 1px solid $black-color;
+          padding-left: 1rem;
+          text-align: left;
+          width: 13rem;
+          height: 2.5rem;
+          border-radius: 2px;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          -o-border-radius: 2px;
+          &:focus {
+            outline: 1px solid $spice-color-one;
+          }
+        }
+        .p-subscribe {
+          cursor: pointer;
+          border-radius: 50%;
+          height: 5rem;
+          background-color: $spice-color-one;
+          color: $white-color;
+          font-weight: bold;
+          width: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.8rem;
+          padding: 1rem;
+          margin-left: 1rem;
+          @media screen and(max-width:800px) {
+            margin: 1rem 0;
+          }
+        }
+      }
+    }
+    .otherProjects {
+      .heading {
+        font-size: 1.05rem;
+        @media screen and(max-width:1000px) {
+          margin-top: 1.5rem;
+        }
+      }
+      .content {
+        margin-top: 1rem;
+
+        display: flex;
+        align-items: baseline;
+        @media screen and(max-width:1000px) {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0rem;
+        }
+        .other {
+          margin-right: 2rem;
+
+          @media screen and(max-width:1000px) {
+            margin-bottom: 1rem;
+          }
+          .heading {
+            font-size: 1rem;
+
+            margin-bottom: 0.7rem;
+          }
+          .link {
+            color: $black-color;
+            font-size: 1.2rem;
+            font-weight: lighter;
+
+            &:hover {
+              color: $spice-color-one;
+            }
+          }
+        }
+      }
+    }
+    .feedback {
+      .heading {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+      }
+      .link {
+        color: $black-color;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        &:hover {
+          color: $spice-color-one;
+        }
+      }
+    }
+    .imgLin {
+      display: flex;
+      @media screen and(max-width:1000px) {
+        margin-top: 2rem;
+        align-items: center;
+      }
+      img {
+        margin-right: 2rem;
+
+        height: 2rem;
+        width: 2rem;
+        cursor: pointer;
+        transition: all ease-in-out 0.5s;
+        &:hover {
+          cursor: pointer;
+          transform: rotate(360deg);
+        }
+      }
+    }
+    // continue
+  }
+}
